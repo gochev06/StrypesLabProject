@@ -5,8 +5,6 @@ from util.func_utils import find_first
 
 
 class RepairRepository(JsonRepository):
-	def __init__(self):
-		super().__init__()
 
 	def find_by_vehicle_vin(self, vin: str) -> Repair | None:
 		return find_first(lambda x: x.vin == vin, self.find_all())

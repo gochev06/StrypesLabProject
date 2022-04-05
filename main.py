@@ -1,10 +1,13 @@
+from dao.customer_repository import CustomerRepository
 from dao.id_generator_uuid import IdGeneratorUuid
+from dao.repair_repository import RepairRepository
 from dao.vehicle_repository import VehicleRepository
 from entity.constants.vehicle_condition import VehicleCondition
 from entity.constants.vehicle_style import VehicleStyle
 from entity.customer import Customer
 from entity.constants.engine import Engine, Transmission, Fuel, EngineCylinders
 from entity.dealership import Dealership
+from entity.repair import Repair, Part, Mechanic
 from entity.vehicle import Vehicle
 
 
@@ -18,21 +21,14 @@ from entity.vehicle import Vehicle
 # country: string,
 # phone: string,
 # email: string
+from services import repair_service
+from services.customer_service import CustomerService
+from services.repair_service import RepairService
 from services.vehicle_service import VehicleService
 
 
 def print_persons( repo ):
 	print()
-	# repo_iter1 = iter(repo)
-	# repo_iter2 = iter(repo)
-	# try:
-	#     while True:
-	#         p1 = next(repo_iter1)
-	#         p2 = next(repo_iter2)
-	#         print(p1.get_formatted_str())
-	#         print(p2.get_formatted_str())
-	# except StopIteration:
-	#     pass
 	for person in repo:
 		print(person)
 
@@ -44,17 +40,6 @@ if __name__ == '__main__':
 	                    "gochev1@abv.bg", 450000.00
 	                    )
 	print(dealer)
-
-	id_gen = IdGeneratorUuid()
-
-	c1 = Customer('Kostadin', 'Gochev', 'wyzrojdenska2', '1231231', 12312312, 543234, 'kostadin@abv.bg')
-	c2 = Customer('Ivan', 'Gochev', 'wyzrojdenska2', '1231231', 4125431, 543234, 'kostadin@abv.bg')
-	c3 = Customer('Stoqn', 'Moskov', 'wyzrojdenska2', '1231231', 87654, 543234, 'kostadin@abv.bg')
-
-	customers = [c1, c2, c3]
-	# print(c1)
-	# print(c2)
-	# print(c3)
 
 	v1 = Vehicle(1113, 'VINas12df34', True, "qnko", 'red', 2012, 'opel', 'astra', VehicleCondition.New,
 	             '12/12/2022', 'blue', 121122, VehicleStyle.Hatchback,
@@ -89,20 +74,31 @@ if __name__ == '__main__':
 	for vehicle in v_repo:
 		print(vehicle)
 
-	# v_repo.save()
-	# v_repo.load()
 	print('\n', 'After Loading:')
 
 	print('-'*50)
-	# print(v1)
-	# print(v2)
-	# print(v3)
 
+	c1 = Customer('Kostadin', 'Gochev', 'goce del4ev1', '1231231', 12312312, 543234, 'kostadin@abv.bg')
+	c2 = Customer('Ivan', 'Gochev', 'otec paisii', '1231231', 4125431, 543234, 'kostadin@abv.bg')
+	c3 = Customer('Stoqn', 'Djambazov', 'ivan vazov', '1231231', 87654, 543234, 'kostadin@abv.bg')
 
-	# cust_repo = CustomerRepository(id_gen)
-	#
-	# for customer in customers:
-	# 	cust_repo.create(customer)
+	customers = [c1, c2, c3]
 
-	print("88888")
-	# print_persons(cust_repo)
+	cust_repo = CustomerRepository('customers.json', Customer)
+	cust_service = CustomerService(cust_repo)
+
+	for customer in customers:
+		cust_service.add_customer(customer)
+
+	r1 = Repair("12/12/2022", v1.vin, Part("new left sideview mirror", 180.00, 1), Mechanic("George From Vacation", 1, 15.00))
+	r2 = Repair("21/02/2022", v2.vin, Part("door not locking", 20.00, 1), Mechanic("George From Vacation", 1, 15.00))
+	r3 = Repair("14/12/2022", v3.vin, Part("new tyres", 145, 4), Mechanic("George From Vacation", 1, 15.00))
+
+	repairs = [r1, r2, r3]
+
+	repair_repo = RepairRepository("repairs.json", Repair)
+	repair_service = RepairService(repair_repo)
+
+	for repair in repairs:
+		repair_service.add_repair(repair)
+

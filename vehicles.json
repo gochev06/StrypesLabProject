@@ -1,0 +1,252 @@
+[
+    {
+        "_module": "entity.vehicle",
+        "_class": "Vehicle",
+        "id": "12ccc50b-b51b-11ec-8405-00d86108bcd2",
+        "stock_no": 1113,
+        "vin": "VINas12df34",
+        "active": true,
+        "purchased_from": "qnko",
+        "body_color": "red",
+        "built_year": 2012,
+        "make": "opel",
+        "model": "astra",
+        "vehicle_condition": {
+            "name": "New",
+            "_module": "entity.constants.vehicle_condition",
+            "_class": "VehicleCondition"
+        },
+        "purchase_date": "12/12/2022",
+        "wheel_color": "blue",
+        "mileage": 121122,
+        "style": {
+            "name": "Hatchback",
+            "_module": "entity.constants.vehicle_style",
+            "_class": "VehicleStyle"
+        },
+        "engine": {
+            "_module": "entity.constants.engine",
+            "_class": "Engine",
+            "engine_cylinders": {
+                "name": "Five",
+                "_module": "entity.constants.engine",
+                "_class": "EngineCylinders"
+            },
+            "engine_capacity": 2.0,
+            "transmission": {
+                "name": "Manual",
+                "_module": "entity.constants.engine",
+                "_class": "Transmission"
+            },
+            "fuel_type": {
+                "name": "Petrol",
+                "_module": "entity.constants.engine",
+                "_class": "Fuel"
+            }
+        },
+        "purchase_price": 4500.0,
+        "asked_price": 4300.0,
+        "options": null,
+        "comments": null
+    },
+    {
+        "_module": "entity.vehicle",
+        "_class": "Vehicle",
+        "id": "12ce23ad-b51b-11ec-bedf-00d86108bcd2",
+        "stock_no": 2131,
+        "vin": "VINas12df34",
+        "active": false,
+        "purchased_from": "qnko",
+        "body_color": "red",
+        "built_year": 2012,
+        "make": "opel",
+        "model": "tigr",
+        "vehicle_condition": {
+            "name": "Used",
+            "_module": "entity.constants.vehicle_condition",
+            "_class": "VehicleCondition"
+        },
+        "purchase_date": "12/12/2022",
+        "wheel_color": "blue",
+        "mileage": 121122,
+        "style": {
+            "name": "Hatchback",
+            "_module": "entity.constants.vehicle_style",
+            "_class": "VehicleStyle"
+        },
+        "engine": {
+            "_module": "entity.constants.engine",
+            "_class": "Engine",
+            "engine_cylinders": {
+                "name": "Five",
+                "_module": "entity.constants.engine",
+                "_class": "EngineCylinders"
+            },
+            "engine_capacity": 2.0,
+            "transmission": {
+                "name": "Manual",
+                "_module": "entity.constants.engine",
+                "_class": "Transmission"
+            },
+            "fuel_type": {
+                "name": "Petrol",
+                "_module": "entity.constants.engine",
+                "_class": "Fuel"
+            }
+        },
+        "purchase_price": 4500.0,
+        "asked_price": 4300.0,
+        "options": null,
+        "comments": null
+    },
+    {
+        "_module": "entity.vehicle",
+        "_class": "Vehicle",
+        "id": "12ce4a99-b51b-11ec-a08c-00d86108bcd2",
+        "stock_no": 1432,
+        "vin": "VINas12df34",
+        "active": true,
+        "purchased_from": "qnko",
+        "body_color": "red",
+        "built_year": 2012,
+        "make": "opel",
+        "model": "zafira",
+        "vehicle_condition": {
+            "name": "Used",
+            "_module": "entity.constants.vehicle_condition",
+            "_class": "VehicleCondition"
+        },
+        "purchase_date": "12/12/2022",
+        "wheel_color": "blue",
+        "mileage": 121122,
+        "style": {
+            "name": "Hatchback",
+            "_module": "entity.constants.vehicle_style",
+            "_class": "VehicleStyle"
+        },
+        "engine": {
+            "_module": "entity.constants.engine",
+            "_class": "Engine",
+            "engine_cylinders": {
+                "name": "Three",
+                "_module": "entity.constants.engine",
+                "_class": "EngineCylinders"
+            },
+            "engine_capacity": 2.0,
+            "transmission": {
+                "name": "Manual",
+                "_module": "entity.constants.engine",
+                "_class": "Transmission"
+            },
+            "fuel_type": {
+                "name": "Petrol",
+                "_module": "entity.constants.engine",
+                "_class": "Fuel"
+            }
+        },
+        "purchase_price": 4500.0,
+        "asked_price": 4300.0,
+        "options": null,
+        "comments": null
+    },
+    {
+        "_module": "entity.vehicle",
+        "_class": "Vehicle",
+        "id": "12ce7191-b51b-11ec-98ed-00d86108bcd2",
+        "stock_no": 1114,
+        "vin": "VIN4123A",
+        "active": true,
+        "purchased_from": "qnko",
+        "body_color": "Blue",
+        "built_year": 2005,
+        "make": "VW",
+        "model": "Golf",
+        "vehicle_condition": {
+            "name": "Used",
+            "_module": "entity.constants.vehicle_condition",
+            "_class": "VehicleCondition"
+        },
+        "purchase_date": "12/12/2022",
+        "wheel_color": "black",
+        "mileage": 123456,
+        "style": {
+            "name": "Hatchback",
+            "_module": "entity.constants.vehicle_style",
+            "_class": "VehicleStyle"
+        },
+        "engine": {
+            "_module": "entity.constants.engine",
+            "_class": "Engine",
+            "engine_cylinders": {
+                "name": "Five",
+                "_module": "entity.constants.engine",
+                "_class": "EngineCylinders"
+            },
+            "engine_capacity": 3.2,
+            "transmission": {
+                "name": "Manual",
+                "_module": "entity.constants.engine",
+                "_class": "Transmission"
+            },
+            "fuel_type": {
+                "name": "Petrol",
+                "_module": "entity.constants.engine",
+                "_class": "Fuel"
+            }
+        },
+        "purchase_price": 12000.11,
+        "asked_price": 15000.44,
+        "options": null,
+        "comments": null
+    },
+    {
+        "_module": "entity.vehicle",
+        "_class": "Vehicle",
+        "id": "12cebf7b-b51b-11ec-bada-00d86108bcd2",
+        "stock_no": 1237,
+        "vin": "VINAsd@",
+        "active": true,
+        "purchased_from": "qnko",
+        "body_color": "Blue",
+        "built_year": 2005,
+        "make": "VW",
+        "model": "Golf",
+        "vehicle_condition": {
+            "name": "Used",
+            "_module": "entity.constants.vehicle_condition",
+            "_class": "VehicleCondition"
+        },
+        "purchase_date": "12/12/2022",
+        "wheel_color": "black",
+        "mileage": 123456,
+        "style": {
+            "name": "Hatchback",
+            "_module": "entity.constants.vehicle_style",
+            "_class": "VehicleStyle"
+        },
+        "engine": {
+            "_module": "entity.constants.engine",
+            "_class": "Engine",
+            "engine_cylinders": {
+                "name": "Five",
+                "_module": "entity.constants.engine",
+                "_class": "EngineCylinders"
+            },
+            "engine_capacity": 3.2,
+            "transmission": {
+                "name": "Manual",
+                "_module": "entity.constants.engine",
+                "_class": "Transmission"
+            },
+            "fuel_type": {
+                "name": "Petrol",
+                "_module": "entity.constants.engine",
+                "_class": "Fuel"
+            }
+        },
+        "purchase_price": 12000.11,
+        "asked_price": 15000.44,
+        "options": null,
+        "comments": null
+    }
+]

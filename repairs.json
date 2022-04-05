@@ -1,0 +1,83 @@
+[
+    {
+        "_module": "entity.repair",
+        "_class": "Repair",
+        "amount": null,
+        "service_date": "12/12/2022",
+        "vehicle_vin": "VINas12df34",
+        "part": {
+            "_module": "entity.repair",
+            "_class": "Part",
+            "description": "new left sideview mirror",
+            "price": 180.0,
+            "quantity": 1,
+            "total": 180.0
+        },
+        "mechanic": {
+            "_module": "entity.repair",
+            "_class": "Mechanic",
+            "name": "George From Vacation",
+            "hours": 1,
+            "rate": 15.0,
+            "total": 15.0
+        },
+        "total_materials_price": 180.0,
+        "total_labor": 15.0,
+        "total_paid": 195.0,
+        "id": "12cf824f-b51b-11ec-85f7-00d86108bcd2"
+    },
+    {
+        "_module": "entity.repair",
+        "_class": "Repair",
+        "amount": null,
+        "service_date": "21/02/2022",
+        "vehicle_vin": "VINas12df34",
+        "part": {
+            "_module": "entity.repair",
+            "_class": "Part",
+            "description": "door not locking",
+            "price": 20.0,
+            "quantity": 1,
+            "total": 20.0
+        },
+        "mechanic": {
+            "_module": "entity.repair",
+            "_class": "Mechanic",
+            "name": "George From Vacation",
+            "hours": 1,
+            "rate": 15.0,
+            "total": 15.0
+        },
+        "total_materials_price": 20.0,
+        "total_labor": 15.0,
+        "total_paid": 35.0,
+        "id": "12cf8250-b51b-11ec-b5c2-00d86108bcd2"
+    },
+    {
+        "_module": "entity.repair",
+        "_class": "Repair",
+        "amount": null,
+        "service_date": "14/12/2022",
+        "vehicle_vin": "VINas12df34",
+        "part": {
+            "_module": "entity.repair",
+            "_class": "Part",
+            "description": "new tyres",
+            "price": 145,
+            "quantity": 4,
+            "total": 580
+        },
+        "mechanic": {
+            "_module": "entity.repair",
+            "_class": "Mechanic",
+            "name": "George From Vacation",
+            "hours": 1,
+            "rate": 15.0,
+            "total": 15.0
+        },
+        "total_materials_price": 580,
+        "total_labor": 15.0,
+        "total_paid": 595.0,
+        "id": "12cfa947-b51b-11ec-9629-00d86108bcd2"
+    }
+]

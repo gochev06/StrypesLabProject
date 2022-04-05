@@ -1,14 +1,18 @@
-
 from dao.customer_repository import CustomerRepository
+from entity.customer import Customer
 
 
 class CustomerService:
 
 	def __init__(self, repo: CustomerRepository):
-		self._cust_repository = repo
+		self._customer_repo = repo
 
-	def get_customer_by_pin( self, pin: str ):
-		return self._cust_repository.find_by_pin(pin)
+	def add_customer(self, customer: Customer):
+		self._customer_repo.create(customer)
+		self._customer_repo.save()
 
-	def find_by_phone( self, phone: str ) -> Customer | None:
-		return find_first(lambda x: x.phone == phone, self.find_all())
+	def get_customer_by_pin( self, pin ):
+		return self._customer_repo.find_by_pin(pin)
+
+	def get_customer_by_phone( self, phone ):
+		return self._customer_repo.find_by_phone(phone)
