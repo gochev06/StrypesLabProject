@@ -24,7 +24,7 @@
         "total_materials_price": 180.0,
         "total_labor": 15.0,
         "total_paid": 195.0,
-        "id": "12cf824f-b51b-11ec-85f7-00d86108bcd2"
+        "id": "01360df2-b813-11ec-999f-00d86108bcd2"
     },
     {
         "_module": "entity.repair",
@@ -51,7 +51,7 @@
         "total_materials_price": 20.0,
         "total_labor": 15.0,
         "total_paid": 35.0,
-        "id": "12cf8250-b51b-11ec-b5c2-00d86108bcd2"
+        "id": "01360df3-b813-11ec-aa33-00d86108bcd2"
     },
     {
         "_module": "entity.repair",
@@ -78,6 +78,6 @@
         "total_materials_price": 580,
         "total_labor": 15.0,
         "total_paid": 595.0,
-        "id": "12cfa947-b51b-11ec-9629-00d86108bcd2"
+        "id": "01360df4-b813-11ec-9f56-00d86108bcd2"
     }
 ]
