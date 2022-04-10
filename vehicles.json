@@ -2,7 +2,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "012ee751-b813-11ec-b79f-00d86108bcd2",
+        "id": "7f47b579-b8ca-11ec-85ec-00d86108bcd2",
         "stock_no": 1113,
         "vin": "VINas12df34",
         "active": true,
@@ -16,6 +16,7 @@
             "_module": "entity.constants.vehicle_condition",
             "_class": "VehicleCondition"
         },
+        "damaged": true,
         "purchase_date": "12/12/2022",
         "wheel_color": "blue",
         "mileage": 121122,
@@ -28,7 +29,7 @@
             "_module": "entity.constants.engine",
             "_class": "Engine",
             "engine_cylinders": {
-                "name": "Five",
+                "value": 5,
                 "_module": "entity.constants.engine",
                 "_class": "EngineCylinders"
             },
@@ -52,7 +53,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0133abb9-b813-11ec-b74a-00d86108bcd2",
+        "id": "7f48784a-b8ca-11ec-baa7-00d86108bcd2",
         "stock_no": 2131,
         "vin": "VINas12df34",
         "active": false,
@@ -66,6 +67,7 @@
             "_module": "entity.constants.vehicle_condition",
             "_class": "VehicleCondition"
         },
+        "damaged": true,
         "purchase_date": "12/12/2022",
         "wheel_color": "blue",
         "mileage": 121122,
@@ -78,7 +80,7 @@
             "_module": "entity.constants.engine",
             "_class": "Engine",
             "engine_cylinders": {
-                "name": "Five",
+                "value": 5,
                 "_module": "entity.constants.engine",
                 "_class": "EngineCylinders"
             },
@@ -102,7 +104,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0133abba-b813-11ec-9e4a-00d86108bcd2",
+        "id": "7f489f37-b8ca-11ec-a571-00d86108bcd2",
         "stock_no": 1432,
         "vin": "VINas12df34",
         "active": true,
@@ -116,6 +118,7 @@
             "_module": "entity.constants.vehicle_condition",
             "_class": "VehicleCondition"
         },
+        "damaged": true,
         "purchase_date": "12/12/2022",
         "wheel_color": "blue",
         "mileage": 121122,
@@ -128,7 +131,7 @@
             "_module": "entity.constants.engine",
             "_class": "Engine",
             "engine_cylinders": {
-                "name": "Three",
+                "value": 3,
                 "_module": "entity.constants.engine",
                 "_class": "EngineCylinders"
             },
@@ -152,7 +155,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0133abbb-b813-11ec-9f9b-00d86108bcd2",
+        "id": "7f48ed2c-b8ca-11ec-8b02-00d86108bcd2",
         "stock_no": 1114,
         "vin": "VIN4123A",
         "active": true,
@@ -166,6 +169,7 @@
             "_module": "entity.constants.vehicle_condition",
             "_class": "VehicleCondition"
         },
+        "damaged": true,
         "purchase_date": "12/12/2022",
         "wheel_color": "black",
         "mileage": 123456,
@@ -178,7 +182,7 @@
             "_module": "entity.constants.engine",
             "_class": "Engine",
             "engine_cylinders": {
-                "name": "Five",
+                "value": 5,
                 "_module": "entity.constants.engine",
                 "_class": "EngineCylinders"
             },
@@ -202,7 +206,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0133abbc-b813-11ec-8774-00d86108bcd2",
+        "id": "7f493b10-b8ca-11ec-9029-00d86108bcd2",
         "stock_no": 1237,
         "vin": "VINAsd@",
         "active": true,
@@ -216,6 +220,7 @@
             "_module": "entity.constants.vehicle_condition",
             "_class": "VehicleCondition"
         },
+        "damaged": true,
         "purchase_date": "12/12/2022",
         "wheel_color": "black",
         "mileage": 123456,
@@ -228,7 +233,7 @@
             "_module": "entity.constants.engine",
             "_class": "Engine",
             "engine_cylinders": {
-                "name": "Five",
+                "value": 5,
                 "_module": "entity.constants.engine",
                 "_class": "EngineCylinders"
             },

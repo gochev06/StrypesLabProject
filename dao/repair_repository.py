@@ -1,5 +1,4 @@
 from dao.json_repository import JsonRepository
-from dao.repository import Repository
 from entity.repair import Repair, Mechanic
 from util.func_utils import find_first
 

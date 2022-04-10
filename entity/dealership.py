@@ -1,20 +1,12 @@
-# id(1): int,
-# dealer_name: string,
-# password: string,
-# address_line_1: string,
-# address_line_2: string,
-# city: string,
-# zip: int,
-# country: string,
-# phone: string,
-# email: string
+from entity.entity import Entity
 
 
-class Dealership:
+class Dealership(Entity):
 
 	def __init__( self, username: str = None, password: str = None, addressline1: str = None, city: str = None,
-	              zipcode: int = None, country: str = None, phone: str = None,
-	              email: str = None, budget: float = None, addressline2: str = None, id: int = None ):
+	              zipcode: int = None, country: str = None, phone: str = None, email: str = None, budget: float = None,
+	              addressline2: str = None, id: int = None ):
+		super().__init__()
 		self.id = id
 		self.username = username
 		self.password = password
@@ -25,7 +17,13 @@ class Dealership:
 		self.country = country
 		self.phone = phone
 		self.email = email
-		self.budget = budget
+		self.budget = self._is_valid_budget(budget)
+
+
+	def _is_valid_budget( self, budget ):
+		if budget <= 0:
+			print("You've gone bankrupt")
+		return budget
 
 
 	def __repr__(self):

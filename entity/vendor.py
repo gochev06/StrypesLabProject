@@ -11,6 +11,7 @@ from entity.entity import Entity
 class AvailableVehicles(Enum):
 	pass
 
+
 class Vendor(Entity):
 
 	def __init__( self, name: str = None):

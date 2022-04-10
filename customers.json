@@ -2,43 +2,43 @@
     {
         "_module": "entity.customer",
         "_class": "Customer",
-        "id": "0133abbd-b813-11ec-ae69-00d86108bcd2",
-        "account_no": null,
+        "id": "7f4988fa-b8ca-11ec-82b2-00d86108bcd2",
+        "account_no": 543234,
         "first_name": "Kostadin",
-        "second_name": "",
+        "second_name": "Gochev",
         "last_name": "Gochev",
-        "pin": 12312312,
-        "id_document_no": 543234,
+        "pin": 12345345435356789123,
+        "id_document_no": 123456789123,
         "address": "goce del4ev1",
         "phone": "1231231",
-        "email": "kostadin@abv.bg"
+        "email": "user@domain.com"
     },
     {
         "_module": "entity.customer",
         "_class": "Customer",
-        "id": "0133abbe-b813-11ec-8ef4-00d86108bcd2",
-        "account_no": null,
+        "id": "7f49aff5-b8ca-11ec-bccc-00d86108bcd2",
+        "account_no": 543234,
         "first_name": "Ivan",
-        "second_name": "",
+        "second_name": "Gochev",
         "last_name": "Gochev",
         "pin": 4125431,
         "id_document_no": 543234,
         "address": "otec paisii",
         "phone": "1231231",
-        "email": "kostadin@abv.bg"
+        "email": "user@domain.com"
     },
     {
         "_module": "entity.customer",
         "_class": "Customer",
-        "id": "0133abbf-b813-11ec-a39d-00d86108bcd2",
-        "account_no": null,
+        "id": "7f49aff6-b8ca-11ec-9d39-00d86108bcd2",
+        "account_no": 4125431,
         "first_name": "Stoqn",
-        "second_name": "",
+        "second_name": "Rangelov",
         "last_name": "Djambazov",
         "pin": 87654,
         "id_document_no": 543234,
         "address": "ivan vazov",
         "phone": "1231231",
-        "email": "kostadin@abv.bg"
+        "email": "user@domain.com"
     }
 ]

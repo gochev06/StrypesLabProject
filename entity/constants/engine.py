@@ -15,10 +15,10 @@ class EngineCylinders(Enum):
 
 	@classmethod
 	def from_json( cls, prop_dict ):
-		return cls[prop_dict['name']]
+		return cls[prop_dict['value']]
 
 	def to_json( self ):
-		return {'name': self.name, '_module': self.__class__.__module__, '_class': self.__class__.__name__}
+		return {'value': self.value, '_module': self.__class__.__module__, '_class': self.__class__.__name__}
 
 
 class Transmission(Enum):
@@ -67,4 +67,4 @@ class Engine(Entity):
 		self.fuel_type = fuel_type
 
 	def __str__(self):
-		return f'{self.engine_cylinders.name}, {self.engine_capacity}, {self.transmission.name}, {self.fuel_type.name}'
+		return f'{self.engine_cylinders.value}, {self.engine_capacity}, {self.transmission.name}, {self.fuel_type.name}'

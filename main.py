@@ -1,3 +1,5 @@
+from tkinter import *
+from tkinter import ttk
 from dao.customer_repository import CustomerRepository
 from dao.id_generator_uuid import IdGeneratorUuid
 from dao.repair_repository import RepairRepository
@@ -9,22 +11,12 @@ from entity.constants.engine import Engine, Transmission, Fuel, EngineCylinders
 from entity.dealership import Dealership
 from entity.repair import Repair, Part, Mechanic
 from entity.vehicle import Vehicle
-
-
-# id(1): int,
-# dealer_name: string,
-# password: string,
-# address_line_1: string,
-# address_line_2: string,
-# city: string,
-# zip: int,
-# country: string,
-# phone: string,
-# email: string
 from services import repair_service
 from services.customer_service import CustomerService
 from services.repair_service import RepairService
 from services.vehicle_service import VehicleService
+from view.main_view import MainView
+from view.utils.tkinter_utils import center_resize_window
 
 
 def print_persons( repo ):
@@ -35,28 +27,43 @@ def print_persons( repo ):
 	print("Number of persons", len(repo))
 
 
+def validateLogin():
+	user_entry = [entry.get() for entry in entryLst]
+	correct = 0
+
+	for x in zip(*credentials.values()):
+
+		if list(x) == user_entry:
+			print("credentials matched")
+			correct = 1
+			break
+
+	if correct == 0:
+		print("Incorrect credentials")
+
+
 if __name__ == '__main__':
 	dealer = Dealership("dealer4", "12345", "na6ta ulitsa", "sofiavarna", 2933, "balgariq", "001234",
 	                    "gochev1@abv.bg", 450000.00
 	                    )
 	print(dealer)
 
-	v1 = Vehicle(1113, 'VINas12df34', True, "qnko", 'red', 2012, 'opel', 'astra', VehicleCondition.New,
+	v1 = Vehicle(1113, 'VINas12df34', True, "qnko", 'red', 2012, 'opel', 'astra', VehicleCondition.New, True,
 	             '12/12/2022', 'blue', 121122, VehicleStyle.Hatchback,
 	             Engine(EngineCylinders.Five, 2.0, Transmission.Manual, Fuel.Petrol), 4500.00, 4300.00
 	             )
-	v2 = Vehicle(2131, 'VINas12df34', False, "qnko", 'red', 2012, 'opel', 'tigr', VehicleCondition.Used,
+	v2 = Vehicle(2131, 'VINas12df34', False, "qnko", 'red', 2012, 'opel', 'tigr', VehicleCondition.Used, True,
 	             '12/12/2022', 'blue', 121122, VehicleStyle.Hatchback,
 	             Engine(EngineCylinders.Five, 2.0, Transmission.Manual, Fuel.Petrol), 4500.00, 4300.00
 	             )
-	v3 = Vehicle(1432, 'VINas12df34', True, "qnko", 'red', 2012, 'opel', 'zafira', VehicleCondition.Used,
+	v3 = Vehicle(1432, 'VINas12df34', True, "qnko", 'red', 2012, 'opel', 'zafira', VehicleCondition.Used, True,
 	             '12/12/2022', 'blue', 121122, VehicleStyle.Hatchback,
 	             Engine(EngineCylinders.Three, 2.0, Transmission.Manual, Fuel.Petrol), 4500.00, 4300.00
 	             )
-	v4 = Vehicle(1114, "VIN4123A", True, "qnko", "Blue", 2005, "VW", "Golf", VehicleCondition.Used,
+	v4 = Vehicle(1114, "VIN4123A", True, "qnko", "Blue", 2005, "VW", "Golf", VehicleCondition.Used, True,
 	             "12/12/2022", "black", 123456, VehicleStyle.Hatchback,
 	             Engine(EngineCylinders.Five, 3.2, Transmission.Manual, Fuel.Petrol), 12000.11, 15000.44)
-	v5 = Vehicle(1237, "VINAsd@", True, "qnko", "Blue", 2005, "VW", "Golf", VehicleCondition.Used, "12/12/2022",
+	v5 = Vehicle(1237, "VINAsd@", True, "qnko", "Blue", 2005, "VW", "Golf", VehicleCondition.Used,  True, "12/12/2022",
 	             "black", 123456, VehicleStyle.Hatchback,
 	             Engine(EngineCylinders.Five, 3.2, Transmission.Manual, Fuel.Petrol), 12000.11, 15000.44
 	             )
@@ -78,9 +85,9 @@ if __name__ == '__main__':
 
 	print('-'*50)
 
-	c1 = Customer('Kostadin', 'Gochev', 'goce del4ev1', '1231231', 12312312, 543234, 'kostadin@abv.bg')
-	c2 = Customer('Ivan', 'Gochev', 'otec paisii', '1231231', 4125431, 543234, 'kostadin@abv.bg')
-	c3 = Customer('Stoqn', 'Djambazov', 'ivan vazov', '1231231', 87654, 543234, 'kostadin@abv.bg')
+	c1 = Customer(543234, 'Kostadin', 'Gochev', 'Gochev', 'goce del4ev1', '1231231', 12345345435356789123, 123456789123, 'user@domain.com')
+	c2 = Customer(543234, 'Ivan', 'Gochev', 'Gochev', 'otec paisii', '1231231', 4125431, 543234, 'user@domain.com')
+	c3 = Customer(4125431, 'Stoqn', 'Rangelov','Djambazov', 'ivan vazov', '1231231', 87654, 543234, 'user@domain.com')
 
 	customers = [c1, c2, c3]
 
@@ -101,5 +108,16 @@ if __name__ == '__main__':
 
 	for repair in repairs:
 		repair_service.add_repair(repair)
+
+	# root = Tk()
+	# center_resize_window(root, 800, 400)
+	# main_view = MainView(root)
+	# root.mainloop()
+
+	root = Tk()
+	center_resize_window(root, 800, 400)
+	root.columnconfigure(0, weight=1)
+	root.rowconfigure(0, weight=1)
+
 
 
