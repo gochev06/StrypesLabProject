@@ -1,0 +1,44 @@
+[
+    {
+        "_module": "entity.customer",
+        "_class": "Customer",
+        "id": "095d9b7b-b97c-11ec-a08b-00d86108bcd2",
+        "account_no": 543234,
+        "first_name": "Kostadin",
+        "second_name": "Gochev",
+        "last_name": "Gochev",
+        "pin": 12345345435356789123,
+        "id_document_no": 123456789123,
+        "address": "goce del4ev1",
+        "phone": "1231231",
+        "email": "user@domain.com"
+    },
+    {
+        "_module": "entity.customer",
+        "_class": "Customer",
+        "id": "095de86b-b97c-11ec-a703-00d86108bcd2",
+        "account_no": 543234,
+        "first_name": "Ivan",
+        "second_name": "Gochev",
+        "last_name": "Gochev",
+        "pin": 4125431,
+        "id_document_no": 543234,
+        "address": "otec paisii",
+        "phone": "1231231",
+        "email": "user@domain.com"
+    },
+    {
+        "_module": "entity.customer",
+        "_class": "Customer",
+        "id": "095de86c-b97c-11ec-a700-00d86108bcd2",
+        "account_no": 4125431,
+        "first_name": "Stoqn",
+        "second_name": "Rangelov",
+        "last_name": "Djambazov",
+        "pin": 87654,
+        "id_document_no": 543234,
+        "address": "ivan vazov",
+        "phone": "1231231",
+        "email": "user@domain.com"
+    }
+]
