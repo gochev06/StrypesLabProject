@@ -2,7 +2,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0b9809a5-b964-11ec-94a7-00d86108bcd2",
+        "id": "36f30df4-b977-11ec-89d7-00d86108bcd2",
         "stock_no": 1113,
         "vin": "VINas12df34",
         "active": true,
@@ -53,7 +53,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0b9a6be7-b964-11ec-a4a7-00d86108bcd2",
+        "id": "36f57027-b977-11ec-ad91-00d86108bcd2",
         "stock_no": 2131,
         "vin": "VINas12df34",
         "active": false,
@@ -104,7 +104,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0b9a6be8-b964-11ec-a422-00d86108bcd2",
+        "id": "36f57028-b977-11ec-b85c-00d86108bcd2",
         "stock_no": 1432,
         "vin": "VINas12df34",
         "active": true,
@@ -155,7 +155,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0b9a6be9-b964-11ec-aee9-00d86108bcd2",
+        "id": "36f57029-b977-11ec-8cfc-00d86108bcd2",
         "stock_no": 1114,
         "vin": "VIN4123A",
         "active": true,
@@ -206,7 +206,7 @@
     {
         "_module": "entity.vehicle",
         "_class": "Vehicle",
-        "id": "0b9a6bea-b964-11ec-8621-00d86108bcd2",
+        "id": "36f5702a-b977-11ec-8fcd-00d86108bcd2",
         "stock_no": 1237,
         "vin": "VINAsd@",
         "active": true,

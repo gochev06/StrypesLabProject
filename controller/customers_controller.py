@@ -23,6 +23,9 @@ class CustomersController:
 	def add_customer_view(self):
 		pass
 
+	def edit_customer_view(self):
+		pass
+
 	def add_customer( self, customer: Customer):
 		self.service.add_customer(customer)
 		self.view.refresh()

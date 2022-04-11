@@ -26,7 +26,7 @@ class Mechanic(Entity):
 
 class Repair(Entity):
 
-	def __init__( self,  service_date: datetime.datetime = None, vehicle_vin: str = None,
+	def __init__( self,  service_date: str = None, vehicle_vin: str = None,
 	              part: Part = None, mechanic: Mechanic = None, amount: float = None, id = None):
 		super().__init__()
 		self.id = id

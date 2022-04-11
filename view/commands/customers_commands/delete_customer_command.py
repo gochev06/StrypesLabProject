@@ -7,4 +7,4 @@ class DeleteCustomerCommand:
 
 	def __call__(self, id):
 		customer = self.controller.get_customer_by_id(id)
-		self.controller.delete_customer(customer.id)
+		self.controller.delete_customer(customer[id])

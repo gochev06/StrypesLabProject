@@ -2,9 +2,9 @@
     {
         "_module": "entity.repair",
         "_class": "Repair",
-        "id": "0b9a6bee-b964-11ec-90dc-00d86108bcd2",
+        "id": "36f5702e-b977-11ec-bcbe-00d86108bcd2",
         "amount": null,
-        "service_date": "12/12/2022",
+        "service_date": "2022-04-11",
         "vehicle_vin": "VINas12df34",
         "part": {
             "_module": "entity.repair",
@@ -29,9 +29,9 @@
     {
         "_module": "entity.repair",
         "_class": "Repair",
-        "id": "0b9a6bef-b964-11ec-a8b1-00d86108bcd2",
+        "id": "36f5702f-b977-11ec-b449-00d86108bcd2",
         "amount": null,
-        "service_date": "21/02/2022",
+        "service_date": "2022-04-11",
         "vehicle_vin": "VINas12df34",
         "part": {
             "_module": "entity.repair",
@@ -56,9 +56,9 @@
     {
         "_module": "entity.repair",
         "_class": "Repair",
-        "id": "0b9a6bf0-b964-11ec-952d-00d86108bcd2",
+        "id": "36f57030-b977-11ec-bf79-00d86108bcd2",
         "amount": null,
-        "service_date": "14/12/2022",
+        "service_date": "2022-04-11",
         "vehicle_vin": "VINas12df34",
         "part": {
             "_module": "entity.repair",
