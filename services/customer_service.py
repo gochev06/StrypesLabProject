@@ -46,11 +46,22 @@ class CustomerService:
 		self._customer_repo.update(customer)
 		self._customer_repo.save()
 
-	def delete_customer(self, customer ):
-		pass
+	def delete_customer(self, id):
+		customer = self._customer_repo.find_by_id(id)
+		self._customer_repo.delete_by_id(customer.id)
+		self._customer_repo.save()
 
 	def get_all_customers(self):
 		return self._customer_repo.find_all()
+
+	def get_customer_by_id( self, id ):
+		return self._customer_repo.find_by_id(id)
+
+	def get_customer_by_pin( self, pin ):
+		return self._customer_repo.find_by_pin(pin)
+
+	def get_customer_by_phone( self, phone ):
+		return self._customer_repo.find_by_phone(phone)
 
 	def reload_customers( self ):
 		self._customer_repo.load()
@@ -59,9 +70,3 @@ class CustomerService:
 	def save_customers( self ):
 		self._customer_repo.save()
 		print("saved successfully!")
-
-	def get_customer_by_pin( self, pin ):
-		return self._customer_repo.find_by_pin(pin)
-
-	def get_customer_by_phone( self, phone ):
-		return self._customer_repo.find_by_phone(phone)

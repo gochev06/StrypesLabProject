@@ -2,7 +2,7 @@
     {
         "_module": "entity.customer",
         "_class": "Customer",
-        "id": "7f4988fa-b8ca-11ec-82b2-00d86108bcd2",
+        "id": "0b9a6beb-b964-11ec-8fe5-00d86108bcd2",
         "account_no": 543234,
         "first_name": "Kostadin",
         "second_name": "Gochev",
@@ -16,7 +16,7 @@
     {
         "_module": "entity.customer",
         "_class": "Customer",
-        "id": "7f49aff5-b8ca-11ec-bccc-00d86108bcd2",
+        "id": "0b9a6bec-b964-11ec-9a56-00d86108bcd2",
         "account_no": 543234,
         "first_name": "Ivan",
         "second_name": "Gochev",
@@ -30,7 +30,7 @@
     {
         "_module": "entity.customer",
         "_class": "Customer",
-        "id": "7f49aff6-b8ca-11ec-9d39-00d86108bcd2",
+        "id": "0b9a6bed-b964-11ec-aa41-00d86108bcd2",
         "account_no": 4125431,
         "first_name": "Stoqn",
         "second_name": "Rangelov",

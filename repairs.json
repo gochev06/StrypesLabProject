@@ -2,6 +2,7 @@
     {
         "_module": "entity.repair",
         "_class": "Repair",
+        "id": "0b9a6bee-b964-11ec-90dc-00d86108bcd2",
         "amount": null,
         "service_date": "12/12/2022",
         "vehicle_vin": "VINas12df34",
@@ -23,12 +24,12 @@
         },
         "total_materials_price": 180.0,
         "total_labor": 15.0,
-        "total_paid": 195.0,
-        "id": "7f49d6ea-b8ca-11ec-91a3-00d86108bcd2"
+        "total_paid": 195.0
     },
     {
         "_module": "entity.repair",
         "_class": "Repair",
+        "id": "0b9a6bef-b964-11ec-a8b1-00d86108bcd2",
         "amount": null,
         "service_date": "21/02/2022",
         "vehicle_vin": "VINas12df34",
@@ -50,12 +51,12 @@
         },
         "total_materials_price": 20.0,
         "total_labor": 15.0,
-        "total_paid": 35.0,
-        "id": "7f49d6eb-b8ca-11ec-b8a7-00d86108bcd2"
+        "total_paid": 35.0
     },
     {
         "_module": "entity.repair",
         "_class": "Repair",
+        "id": "0b9a6bf0-b964-11ec-952d-00d86108bcd2",
         "amount": null,
         "service_date": "14/12/2022",
         "vehicle_vin": "VINas12df34",
@@ -77,7 +78,6 @@
         },
         "total_materials_price": 580,
         "total_labor": 15.0,
-        "total_paid": 595.0,
-        "id": "7f49fde6-b8ca-11ec-aa40-00d86108bcd2"
+        "total_paid": 595.0
     }
 ]

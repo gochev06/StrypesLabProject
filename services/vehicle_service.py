@@ -19,11 +19,6 @@ class VehicleService:
 		# Purchased from
 		# vehicle condition
 
-
-	def add_vehicle(self, vehicle: Vehicle):
-		self._vehicle_repo.create(vehicle)
-		self._vehicle_repo.save()
-
 	def get_all_vehicles(self):
 		return self._vehicle_repo.find_all()
 
@@ -35,6 +30,21 @@ class VehicleService:
 
 	def get_vehicle_by_stock_no(self, stock_no):
 		return self._vehicle_repo.find_by_stock_no(stock_no)
+
+	def add_vehicle(self, vehicle: Vehicle):
+		self.validate_vehicle(vehicle)
+		self._vehicle_repo.create(vehicle)
+		self._vehicle_repo.save()
+
+	def update_vehicle(self, vehicle: Vehicle):
+		self.validate_vehicle(vehicle)
+		self._vehicle_repo.create(vehicle)
+		self._vehicle_repo.save()
+
+	def delete_vehicle(self, id):
+		vehicle = self._vehicle_repo.find_by_id(id)
+		self._vehicle_repo.delete_by_id(id)
+		self._vehicle_repo.save()
 
 	def reload_vehicles(self):
 		self._vehicle_repo.load()
