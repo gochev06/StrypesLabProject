@@ -5,4 +5,4 @@ class EditCustomerViewCommand:
 		self.controller = controller
 
 	def __call__(self, id, *args, **kwargs):
-		self.controller.edit_customer_view()
+		self.controller.edit_customer_view(id)

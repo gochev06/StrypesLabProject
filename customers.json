@@ -40,5 +40,19 @@
         "address": "ivan vazov",
         "phone": "1231231",
         "email": "user@domain.com"
+    },
+    {
+        "_module": "entity.customer",
+        "_class": "Customer",
+        "id": "2361c7ef-b983-11ec-b0a6-00d86108bcd2",
+        "account_no": 6543,
+        "first_name": "asdasd",
+        "second_name": "12e3sad",
+        "last_name": "asdsesad",
+        "pin": 1234567895,
+        "id_document_no": 1234567898,
+        "address": "asdefasd2",
+        "phone": "1234567897",
+        "email": "asdfssd@abv.bg"
     }
 ]

@@ -1,7 +1,5 @@
 from tkinter import *
 from tkinter import ttk
-from typing import Iterable
-
 
 DEFAULT_COLUMN_WIDTH_PX = 140
 
@@ -30,7 +28,7 @@ class ItemList(ttk.Frame):
 
         # resize the parent window to show treeview widget
         self.tree.update_idletasks()
-        print(self.tree.winfo_width(), self.tree.winfo_height())
+        # print(self.tree.winfo_width(), self.tree.winfo_height())
         self.rowconfigure(0, weight=1, minsize=self.tree.winfo_height())
         self.columnconfigure(0, weight=1, minsize=self.tree.winfo_width())
 

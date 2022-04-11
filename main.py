@@ -72,21 +72,12 @@ if __name__ == '__main__':
 	#
 	# print('-'*50)
 	#
-	# c1 = Customer(543234, 'Kostadin', 'Gochev', 'Gochev', 'goce del4ev1', '1231231', 12345345435356789123, 123456789123, 'user@domain.com')
-	# c2 = Customer(543234, 'Ivan', 'Gochev', 'Gochev', 'otec paisii', '1231231', 4125431, 543234, 'user@domain.com')
-	# c3 = Customer(4125431, 'Stoqn', 'Rangelov','Djambazov', 'ivan vazov', '1231231', 87654, 543234, 'user@domain.com')
-	#
-	# customers = [c1, c2, c3]
-	#
-	# cust_repo = CustomerRepository('customers.json', Customer)
-	# cust_service = CustomerService(cust_repo)
-	#
-	# for customer in customers:
-	# 	cust_service.add_customer(customer)
-	#
-	# r1 = Repair(str(dt.datetime.now().date()), v1.vin, Part("new left sideview mirror", 180.00, 1), Mechanic("George From Vacation", 1, 15.00))
-	# r2 = Repair(str(dt.datetime.now().date()), v2.vin, Part("door not locking", 20.00, 1), Mechanic("George From Vacation", 1, 15.00))
-	# r3 = Repair(str(dt.datetime.now().date()), v3.vin, Part("new tyres", 145, 4), Mechanic("George From Vacation", 1, 15.00))
+	# r1 = Repair(str(dt.datetime.now().date()), v1.vin, Part("new left sideview mirror", 180.00, 1),
+	#             Mechanic("George From Vacation", 1, 15.00))
+	# r2 = Repair(str(dt.datetime.now().date()), v2.vin, Part("door not locking", 20.00, 1),
+	#             Mechanic("George From Vacation", 1, 15.00))
+	# r3 = Repair(str(dt.datetime.now().date()), v3.vin, Part("new tyres", 145, 4),
+	#             Mechanic("George From Vacation", 1, 15.00))
 	#
 	# repairs = [r1, r2, r3]
 	#

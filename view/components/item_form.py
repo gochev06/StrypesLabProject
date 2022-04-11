@@ -93,7 +93,7 @@ class ItemForm(Toplevel):
             elif self.types[i] == "list":
                 value = [s.strip() for s in str_val.split(',')]
             setattr(result, col, value)
-        print(self.command, result)
+        # print(self.command, result)
         self.dismiss()
         self.command(result)
 

@@ -47,8 +47,8 @@ class MainView(ttk.Frame):
 
         # Books menu
         menu_books = Menu(self.menubar)
-        self.menubar.add_cascade(menu=menu_books, label="Books", underline=0)
-        menu_books.add_command(label="List Books", command=self.list_customers_command)
+        self.menubar.add_cascade(menu=menu_books, label="Customers", underline=0)
+        menu_books.add_command(label="List of Customers", command=self.list_customers_command)
         menu_books.add_separator()
         menu_books.add_command(label="Add Book", command=self.add_customer_view_command)
         menu_books.add_command(label="Edit Book", command=self.edit_customer_view_command)

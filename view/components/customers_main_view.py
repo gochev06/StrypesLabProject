@@ -33,7 +33,7 @@ class CustomersMainView(ttk.Frame):
 
         # resize the parent window to show treeview widget
         self.item_list.update_idletasks()
-        print(self.item_list.winfo_width(), self.item_list.winfo_height())
+        # print(self.item_list.winfo_width(), self.item_list.winfo_height())
         center_resize_window(parent,
                              self.item_list.winfo_width(),
                              self.item_list.winfo_height() + BUTTONS_PANEL_HEIGHT_PX)
@@ -59,7 +59,7 @@ class CustomersMainView(ttk.Frame):
     def edit_selected( self ):
         items = self.item_list.get_selected_tems()
         ids = list(map(lambda item: item[0], items))
-        print(ids)
+        # print(ids)
         self.customers_controller.edit_customer_view(ids[0])
 
     def delete_selected(self):
