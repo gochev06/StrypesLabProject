@@ -1,6 +1,7 @@
 from entity.customer import Customer
 from services.customer_service import CustomerService
 from view.commands.customers_commands.add_customer_command import AddCustomerCommand
+from view.commands.customers_commands.update_customer_command import UpdateCustomerCommand
 from view.commands.customers_commands.views.edit_customer_view_command import EditCustomerViewCommand
 from view.components.item_form import ItemForm
 
@@ -33,7 +34,7 @@ class CustomersController:
 		form = ItemForm(self.view, Customer(customer.account_no, customer.first_name, customer.second_name,
 		                                    customer.last_name, customer.address, customer.phone, customer.pin,
 		                                    customer.id_document_no,customer.email, customer.id),
-		                EditCustomerViewCommand(self)
+		                UpdateCustomerCommand(self, customer)
 		                )
 
 	def add_customer( self, customer: Customer):

@@ -16,7 +16,7 @@ class ItemForm(Toplevel):
         self.edit = edit
 
         self.frame = ttk.Frame(self, padding="30 30 30 30")
-        self.title("Add Book")
+        self.title("Add Customer")
         self.frame.grid(row=0, column=0, sticky=NSEW)
         center_resize_window(self)
 
@@ -24,7 +24,7 @@ class ItemForm(Toplevel):
         self.types = []
         self.entries = []
 
-        self.columns = tuple(self.item.__dict__.keys())[3:]
+        self.columns = tuple(self.item.__dict__.keys())[2:]
 
         for i, col in enumerate(self.columns):
             # add view models
@@ -93,7 +93,7 @@ class ItemForm(Toplevel):
             elif self.types[i] == "list":
                 value = [s.strip() for s in str_val.split(',')]
             setattr(result, col, value)
-        # print(self.command, result)
+        print(self.command, result)
         self.dismiss()
         self.command(result)
 

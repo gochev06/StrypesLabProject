@@ -6,6 +6,7 @@ from controller.customers_controller import CustomersController
 from view.commands.customers_commands.delete_customer_command import DeleteCustomerCommand
 from view.commands.customers_commands.load_customers_command import LoadCustomersCommand
 from view.commands.customers_commands.save_customers_command import SaveCustomersCommand
+from view.commands.customers_commands.update_customer_command import UpdateCustomerCommand
 from view.commands.customers_commands.views.add_customer_view_command import AddCustomerViewCommand
 from view.commands.customers_commands.views.edit_customer_view_command import EditCustomerViewCommand
 from view.commands.customers_commands.views.list_customers_command import ListCustomersCommand
@@ -45,14 +46,14 @@ class MainView(ttk.Frame):
         self.delete_customer_command = DeleteCustomerCommand(customers_controller)
         self.list_customers_command = ListCustomersCommand(customers_controller)
 
-        # Books menu
-        menu_books = Menu(self.menubar)
-        self.menubar.add_cascade(menu=menu_books, label="Customers", underline=0)
-        menu_books.add_command(label="List of Customers", command=self.list_customers_command)
-        menu_books.add_separator()
-        menu_books.add_command(label="Add Book", command=self.add_customer_view_command)
-        menu_books.add_command(label="Edit Book", command=self.edit_customer_view_command)
-        menu_books.add_command(label="Delete Books", command=self.delete_customer_command)
+        # Customers menu
+        customers_menu = Menu(self.menubar)
+        self.menubar.add_cascade(menu=customers_menu, label="Customers", underline=0)
+        customers_menu.add_command(label="List of Customers", command=self.list_customers_command)
+        customers_menu.add_separator()
+        customers_menu.add_command(label="Add Customer", command=self.add_customer_view_command)
+        customers_menu.add_command(label="Edit Customer", command=self.edit_customer_view_command)
+        customers_menu.add_command(label="Delete Customer", command=self.delete_customer_command)
 
 
         # Show items
@@ -60,8 +61,6 @@ class MainView(ttk.Frame):
                                       self.add_customer_view_command,
                                       self.edit_customer_view_command,
                                       self.delete_customer_command)
-
-        # print_hierarchy(root)
 
     def refresh(self):
         self.item_list.refresh()

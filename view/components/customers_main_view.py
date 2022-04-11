@@ -3,6 +3,7 @@ from tkinter import ttk
 
 from controller.customers_controller import CustomersController
 from view.commands.customers_commands.delete_customer_command import DeleteCustomerCommand
+from view.commands.customers_commands.update_customer_command import UpdateCustomerCommand
 from view.commands.customers_commands.views.add_customer_view_command import AddCustomerViewCommand
 from view.commands.customers_commands.views.edit_customer_view_command import EditCustomerViewCommand
 from view.components.item_list import ItemList
@@ -16,7 +17,8 @@ BUTTONS_PANEL_HEIGHT_PX = 100
 class CustomersMainView(ttk.Frame):
     def __init__(self, parent, customers_controller: CustomersController,
                  add_customer_view_command: AddCustomerViewCommand,
-                 edit_customer_view_command: EditCustomerViewCommand, delete_customer_command: DeleteCustomerCommand):
+                 edit_customer_view_command: EditCustomerViewCommand,
+                 delete_customer_command: DeleteCustomerCommand):
         super().__init__(parent, padding="3 3 12 12")
         self.add_customer_view_command = add_customer_view_command
         self.edit_customer_view_command = edit_customer_view_command
@@ -70,5 +72,5 @@ class CustomersMainView(ttk.Frame):
         self.customers_controller.save_customers()
 
     def refresh(self):
-        books = self.customers_controller.get_all_customers()
-        self.item_list.set_items(books)
+        customers = self.customers_controller.get_all_customers()
+        self.item_list.set_items(customers)
