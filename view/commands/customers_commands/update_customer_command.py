@@ -1,7 +1,7 @@
 from controller.customers_controller import CustomersController
 
 
-class EditCustomerCommand:
+class UpdateCustomerCommand:
 	def __init__(self, controller: CustomersController):
 		self.controller = controller
 

@@ -1,5 +1,8 @@
 from entity.customer import Customer
 from services.customer_service import CustomerService
+from view.commands.customers_commands.add_customer_command import AddCustomerCommand
+from view.commands.customers_commands.views.edit_customer_view_command import EditCustomerViewCommand
+from view.components.item_form import ItemForm
 
 
 class CustomersController:
@@ -21,10 +24,17 @@ class CustomersController:
 		return self.service.save_customers()
 
 	def add_customer_view(self):
-		pass
+		form = ItemForm(self.view, Customer(0, "", "", "", "", "", 0, 0, "", ""),
+		                AddCustomerCommand(self)
+		                )
 
-	def edit_customer_view(self):
-		pass
+	def edit_customer_view(self, id):
+		customer: Customer = self.get_customer_by_id(id)
+		form = ItemForm(self.view, Customer(customer.account_no, customer.first_name, customer.second_name,
+		                                    customer.last_name, customer.address, customer.phone, customer.pin,
+		                                    customer.id_document_no,customer.email, customer.id),
+		                EditCustomerViewCommand(self)
+		                )
 
 	def add_customer( self, customer: Customer):
 		self.service.add_customer(customer)

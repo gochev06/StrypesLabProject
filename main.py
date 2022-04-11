@@ -105,16 +105,16 @@ if __name__ == '__main__':
 	customers_repo = CustomerRepository('customers.json', Customer)
 	customers_service = CustomerService(customers_repo)
 
-	c1 = Customer(543234, 'Kostadin', 'Gochev', 'Gochev', 'goce del4ev1', '1231231', 12345345435356789123, 123456789123,
-	              'user@domain.com'
-	              )
-	c2 = Customer(543234, 'Ivan', 'Gochev', 'Gochev', 'otec paisii', '1231231', 4125431, 543234, 'user@domain.com')
-	c3 = Customer(4125431, 'Stoqn', 'Rangelov', 'Djambazov', 'ivan vazov', '1231231', 87654, 543234, 'user@domain.com')
-
-	customers = [c1, c2, c3]
-
-	for customer in customers:
-		customers_service.add_customer(customer)
+	# c1 = Customer(543234, 'Kostadin', 'Gochev', 'Gochev', 'goce del4ev1', '1231231', 12345345435356789123, 123456789123,
+	#               'user@domain.com'
+	#               )
+	# c2 = Customer(543234, 'Ivan', 'Gochev', 'Gochev', 'otec paisii', '1231231', 4125431, 543234, 'user@domain.com')
+	# c3 = Customer(4125431, 'Stoqn', 'Rangelov', 'Djambazov', 'ivan vazov', '1231231', 87654, 543234, 'user@domain.com')
+	#
+	# customers = [c1, c2, c3]
+	#
+	# for customer in customers:
+	# 	customers_service.add_customer(customer)
 
 	customers_controller = CustomersController(customers_service)
 	customers_controller.reload_customers()

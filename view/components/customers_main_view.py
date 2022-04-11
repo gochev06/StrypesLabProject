@@ -41,14 +41,14 @@ class CustomersMainView(ttk.Frame):
         # add buttons
         buttons_frame = ttk.Frame(self, padding="20 10 20 10")
         buttons_frame.grid(column=0, row=1, sticky="nsew")
-        self.add_button = ttk.Button(buttons_frame, text="Add Book", padding=10,
+        self.add_button = ttk.Button(buttons_frame, text="Add Customer", padding=10,
                                      command=self.add_customer_view_command)
         self.add_button.grid(column=1, row=0, sticky=(N,E), padx=40, pady=20)
 
-        self.add_button = ttk.Button(buttons_frame, text="Edit Book", padding=10,
-                                     command=self.edit_customer_view_command)
+        self.add_button = ttk.Button(buttons_frame, text="Edit Customer", padding=10,
+                                     command=self.edit_selected)
         self.add_button.grid(column=2, row=0, sticky=(N,E), padx=40, pady=20)
-        self.add_button = ttk.Button(buttons_frame, text="Delete Books", padding=10,
+        self.add_button = ttk.Button(buttons_frame, text="Delete Customer", padding=10,
                                      command=self.delete_selected)
         self.add_button.grid(column=3, row=0, sticky=(N,E), padx=40, pady=20)
 
@@ -60,7 +60,7 @@ class CustomersMainView(ttk.Frame):
         items = self.item_list.get_selected_tems()
         ids = list(map(lambda item: item[0], items))
         print(ids)
-        self.customers_controller.update_customer(ids[0])
+        self.customers_controller.edit_customer_view(ids[0])
 
     def delete_selected(self):
         items = self.item_list.get_selected_tems()
