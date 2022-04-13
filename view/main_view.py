@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 
-import veh as veh
 
 from controller.customers_controller import CustomersController
 from controller.vehicles_controller import VehicleController
@@ -20,18 +19,19 @@ from view.commands.vehicle_commands.views.edit_vehicle_view_command import EditV
 from view.commands.vehicle_commands.views.list_vehicles_command import ListVehiclesCommand
 from view.components.customers_main_view import CustomersMainView
 from view.components.vehicles_main_view import VehiclesMainView
-
+from util.seed.dealership_seed import generate_dealer
 
 class MainView(ttk.Notebook):
     def __init__(self, root, customers_controller: CustomersController, vehicles_controller: VehicleController):
-        super().__init__(root, padding="3 3 12 12")
+        super().__init__(root, padding=(3, 3, 12, 12))
         self.root = root
         self.customers_controller = customers_controller
         self.vehicles_controller = vehicles_controller
+        self.dealer = generate_dealer()
 
         # Set root
-        self.root.title('4 Dealership')
-        self.grid(column=0, row=0, sticky=(N, W, E, S))
+        self.root.title("4 Dealership")
+        self.grid(column=1, row=0, sticky=(N, W, E, S))
 
         # Create menus
         self.menubar = Menu(root)
@@ -72,6 +72,9 @@ class MainView(ttk.Notebook):
 
 
         # Show items
+
+        ttk.Label(self.root, text=f'{self.dealer.phone}').grid(column=0, row=0, sticky=(N, W))
+
         self.item_list_customers = CustomersMainView(self.root, self.customers_controller,
                                       self.add_customer_view_command,
                                       self.edit_customer_view_command,

@@ -6,30 +6,29 @@ DEFAULT_COLUMN_WIDTH_PX = 140
 
 class ItemList(ttk.Frame):
     def __init__(self, parent, items):
-        super().__init__(parent, padding=(3, 3, 12, 12))
+        super().__init__(parent, padding="3 3 12 12")
         self.parent = parent
         self.items = items
         self.item_pos_ids = None
         self.grid(row=0, column=0, sticky='nsew')
 
         columns = tuple(self.items[0].__dict__.keys())[2:]
-        self.tree = ttk.Treeview(self, columns=columns,
-                                 selectmode='extended', show='headings')
+        self.tree = ttk.Treeview(self, columns=columns, show='headings')
         for column in columns:
             self.tree.heading(column, text=column.title())
-            self.tree.column(column, width=DEFAULT_COLUMN_WIDTH_PX)
+            self.tree.column(column, stretch=False, width=DEFAULT_COLUMN_WIDTH_PX)
 
         self.tree.grid(row=0, column=0, sticky=NSEW)
 
         # add vertical scrollbar
         vsb = ttk.Scrollbar(self, orient=VERTICAL, command=self.tree.yview)
-        vsb.grid(row=0, column=1, sticky=(N, W, S), padx=0)
-        self.tree.configure(yscroll=vsb.set)
+        vsb.grid(row=0, column=1, sticky=NS, padx=0)
+        self.tree.configure(yscrollcommand=vsb.set)
 
         # add Horizontal Scrollbar
         hsb = ttk.Scrollbar(self, orient=HORIZONTAL, command=self.tree.xview)
-        hsb.grid(row=1, column=0, sticky=(N, W, S), padx=0)
-        self.tree.configure(xscroll=hsb.set)
+        self.tree.configure(xscrollcommand=hsb.set)
+        hsb.grid(row=1, column=0, sticky = EW)
 
         # resize the parent window to show treeview widget
         self.tree.update_idletasks()
