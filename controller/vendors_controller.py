@@ -1,8 +1,8 @@
 from entity.repair import Repair
-from services.repair_service import RepairService
+from services.vendor_service import VendorService
 
 
-class RepairController:
+class VendorsController:
 
 	def __init__(self, service: RepairService, view = None):
 		self.view = view

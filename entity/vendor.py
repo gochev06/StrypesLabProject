@@ -14,9 +14,12 @@ class AvailableVehicles(Enum):
 
 class Vendor(Entity):
 
-	def __init__( self, name: str = None):
+	def __init__( self, name: str = None, id: str = None):
 		super().__init__()
+		self.id = id
 		self.name = name
+		self.vehicles = []
 
 	def __str__(self):
 		return self.name
+

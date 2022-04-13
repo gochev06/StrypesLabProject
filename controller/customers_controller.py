@@ -25,13 +25,13 @@ class CustomersController:
 		return self.service.save_customers()
 
 	def add_customer_view(self):
-		form = ItemForm(self.view, Customer(0, "", "", "", "", "", 0, 0, "", ""),
+		form = ItemForm(self.view, Customer("", "", "", "", "", 0, 0, "", ""),
 		                AddCustomerCommand(self)
 		                )
 
 	def edit_customer_view(self, id):
 		customer: Customer = self.get_customer_by_id(id)
-		form = ItemForm(self.view, Customer(customer.account_no, customer.first_name, customer.second_name,
+		form = ItemForm(self.view, Customer(customer.first_name, customer.second_name,
 		                                    customer.last_name, customer.address, customer.phone, customer.pin,
 		                                    customer.id_document_no,customer.email, customer.id),
 		                UpdateCustomerCommand(self, customer)

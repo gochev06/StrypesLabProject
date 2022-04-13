@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import ttk
-from typing import Iterable
 
 from view.utils.tkinter_utils import center_resize_window
 
@@ -16,9 +15,9 @@ class ItemForm(Toplevel):
         self.edit = edit
 
         self.frame = ttk.Frame(self, padding="30 30 30 30")
-        self.title("Add Customer")
+        self.title("Add")
         self.frame.grid(row=0, column=0, sticky=NSEW)
-        center_resize_window(self)
+        center_resize_window(self, 1200, 800)
 
         self.models = []
         self.types = []

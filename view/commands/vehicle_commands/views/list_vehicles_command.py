@@ -1,6 +1,6 @@
-class LoadCustomersCommand:
+class ListVehiclesCommand:
 	def __init__(self, controller):
 		self.controller = controller
 
 	def __call__(self, *args, **kwargs):
-		self.controller.reload_customers()
+		self.controller.get_all_vehicles()

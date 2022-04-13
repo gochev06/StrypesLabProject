@@ -6,7 +6,7 @@ DEFAULT_COLUMN_WIDTH_PX = 140
 
 class ItemList(ttk.Frame):
     def __init__(self, parent, items):
-        super().__init__(parent, padding="3 3 12 12")
+        super().__init__(parent, padding=(3, 3, 12, 12))
         self.parent = parent
         self.items = items
         self.item_pos_ids = None
@@ -25,6 +25,11 @@ class ItemList(ttk.Frame):
         vsb = ttk.Scrollbar(self, orient=VERTICAL, command=self.tree.yview)
         vsb.grid(row=0, column=1, sticky=(N, W, S), padx=0)
         self.tree.configure(yscroll=vsb.set)
+
+        # add Horizontal Scrollbar
+        hsb = ttk.Scrollbar(self, orient=HORIZONTAL, command=self.tree.xview)
+        hsb.grid(row=1, column=0, sticky=(N, W, S), padx=0)
+        self.tree.configure(xscroll=hsb.set)
 
         # resize the parent window to show treeview widget
         self.tree.update_idletasks()
