@@ -1,15 +1,15 @@
+from entity.customer import Customer
 from entity.entity import Entity
+from entity.vehicle import Vehicle
 
 
-class Sale():
+class Sale(Entity):
 
-	def __init__(self, vehicle_stock_no: int = None, account_no: int = None, sale_no: int = None,
-	              sale_type: str = None, sale_price: float = None, id = None):
-		# super().__init__()
+	def __init__(self, vehicle_id: str = None, customer_id: str = None,
+	              sale_price: float = None, id: str = None):
+		super().__init__()
 		self.id = id
-		self.vehichle_stock_no = vehicle_stock_no
-		self.account_no = account_no
-		self.sale_no = sale_no
-		self.sale_type = sale_type
+		self.vehicle_id = vehicle_id
+		self.customer_id = customer_id
 		self.sale_price = sale_price
 

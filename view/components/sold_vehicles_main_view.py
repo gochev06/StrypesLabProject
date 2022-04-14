@@ -38,24 +38,6 @@ class SoldVehiclesMainView(ttk.Frame):
                              self.item_list.winfo_width(),
                              self.item_list.winfo_height() + BUTTONS_PANEL_HEIGHT_PX)
 
-        # add buttons
-        buttons_frame = ttk.Frame(self, padding="20 10 20 10")
-        buttons_frame.grid(column=0, row=1, sticky="nsew")
-        self.add_button = ttk.Button(buttons_frame, text="Add Vehicle", padding=10,
-                                     command=self.add_sold_vehicle_command)
-        self.add_button.grid(column=1, row=0, sticky=(N,E), padx=40, pady=20)
-
-        self.add_button = ttk.Button(buttons_frame, text="Edit Vehicle", padding=10,
-                                     command=self.edit_selected)
-        self.add_button.grid(column=2, row=0, sticky=(N,E), padx=40, pady=20)
-        self.add_button = ttk.Button(buttons_frame, text="Delete Vehicle", padding=10,
-                                     command=self.delete_selected)
-        self.add_button.grid(column=3, row=0, sticky=(N,E), padx=40, pady=20)
-
-        rows, cols = buttons_frame.grid_size()
-        for col in range(cols):
-            buttons_frame.columnconfigure(col,minsize=300, pad=30)
-
     def edit_selected( self ):
         items = self.item_list.get_selected_items()
         ids = list(map(lambda item: item[0], items))

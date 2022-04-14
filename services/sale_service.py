@@ -23,14 +23,18 @@ class SaleService:
 		self._sale_repo.delete_by_id(sale.id)
 		self._sale_repo.save()
 
+
 	def get_all_sales(self):
 		return self._sale_repo.find_all()
 
 	def get_sale_by_id(self, id):
 		return self._sale_repo.find_by_id(id)
 
-	def get_sale_by_sale_no( self, sale_no: int ):
-		return self._sale_repo.find_by_sale_no(sale_no)
+	def get_sale_by_vehicle_id(self, id):
+		return self._sale_repo.find_by_vehicle_id(id)
+
+	def get_sale_by_customer_id(self, id):
+		return self._sale_repo.find_by_customer_id(id)
 
 	def reload_sales( self ):
 		self._sale_repo.load()
