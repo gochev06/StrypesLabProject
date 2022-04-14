@@ -29,8 +29,8 @@ class VendorService:
 
 	def reload_vendors( self ):
 		self._vendor_repo.load()
-		print(self.get_all_vendors())
+		# print(self.get_all_vendors())
 
 	def save_vendors(self):
 		self._vendor_repo.save()
-		print("Saved")
+		# print("Saved")

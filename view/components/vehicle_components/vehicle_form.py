@@ -17,7 +17,7 @@ class VehicleForm(Toplevel):
 		self.frame = ttk.Frame(self, padding = "30 30 30 30")
 		self.title("Add")
 		self.frame.grid(row = 0, column = 0, sticky = NSEW)
-		center_resize_window(self, 1200, 800)
+		center_resize_window(self, 600, 800)
 
 		self.models = []
 		self.types = []
@@ -44,19 +44,21 @@ class VehicleForm(Toplevel):
 			ttk.Label(self.frame, text = col.title(), justify = LEFT).grid(column = 0, row = i, sticky = EW)
 
 			# add entries
-			# if col == 'active':
-			# 	options_list = [True, False]
-			# 	model = BooleanVar()
-			# 	value_inside = model
-			# 	value_inside.set(True)
-			# 	entry = OptionMenu(self.frame, value_inside, *[option for option in options_list])
-			# 	entry.grid(column = 1, row = i, sticky = EW)
-			# if col == 'engine':
-			# 	legend = LabelFrame(self, text="Engine", padx=5, pady=5)
-			# 	legend_label = Label(legend, text=col.title())
-			# else:
-			entry = ttk.Entry(self.frame, textvariable = model)
-			entry.grid(column = 1, row = i, sticky = EW)
+			if col == 'condition':
+				condition_list = ['New', 'Used']
+				entry = ttk.Combobox(self.frame, value=condition_list)
+				entry.grid(column = 1, row = i, sticky = EW)
+			elif col == 'style':
+				style_list = ['Sedan', 'Coupe', 'Estate', 'Cabriolet', 'Van', 'Hatchback', 'PickUp']
+				entry = ttk.Combobox(self.frame, value=style_list)
+				entry.grid(column = 1, row = i, sticky = EW)
+			elif col == 'engine':
+				engine_list = ['Petrol', 'Diesel', 'Hybrid']
+				entry = ttk.Combobox(self.frame, value=engine_list)
+				entry.grid(column = 1, row = i, sticky = EW)
+			else:
+				entry = ttk.Entry(self.frame, textvariable = model)
+				entry.grid(column = 1, row = i, sticky = EW)
 			if col == 'id':
 				entry.configure(state = DISABLED)
 			self.entries.append(entry)
@@ -102,10 +104,8 @@ class VehicleForm(Toplevel):
 				value = str_val
 			elif self.types[i] == "list":
 				value = [s.strip() for s in str_val.split(',')]
-			elif self.types[i] == "bool":
-				value = bool(str_val)
 			setattr(result, col, value)
-		# print(self.command, result)
+		print(self.command, result)
 		self.dismiss()
 		self.command(result)
 

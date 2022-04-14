@@ -31,8 +31,8 @@ class CashFlowService:
 
 	def reload_cash_flow( self ):
 		self._cash_flow_repo.load()
-		print(self.get_all())
+		# print(self.get_all())
 
 	def save_cash_flow( self ):
 		self._cash_flow_repo.save()
-		print("Cash flow saved")
+		# print("Cash flow saved")

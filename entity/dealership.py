@@ -1,6 +1,10 @@
 from controller.customers_controller import CustomersController
+from controller.vehicles_controller import VehicleController
+from dao.customer_repository import CustomerRepository
 from entity.customer import Customer
 from entity.entity import Entity
+from entity.vehicle import Vehicle
+from services.customer_service import CustomerService
 
 
 class Dealership(Entity):
@@ -42,5 +46,6 @@ class Dealership(Entity):
 	def get_formatted_str( self ):
 		return f'|{str(self.id):5s})| {self.username:10s} | {self.password:10s}|{self.city:15s} |'
 
-	def make_a_sale( self ):
-		customer = CustomersController.get_customer_by_id()
+	def make_a_sale(self):
+		pass
+

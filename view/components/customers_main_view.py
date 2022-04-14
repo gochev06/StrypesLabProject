@@ -58,13 +58,13 @@ class CustomersMainView(ttk.Frame):
             buttons_frame.columnconfigure(col,minsize=300, pad=30)
 
     def edit_selected( self ):
-        items = self.item_list.get_selected_tems()
+        items = self.item_list.get_selected_items()
         ids = list(map(lambda item: item[0], items))
         print(ids)
         self.customers_controller.edit_customer_view(ids[0])
 
     def delete_selected(self):
-        items = self.item_list.get_selected_tems()
+        items = self.item_list.get_selected_items()
         ids = list(map(lambda item: item[0], items))
         print(ids)
         self.customers_controller.delete_customer(ids[0])

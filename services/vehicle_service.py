@@ -48,8 +48,8 @@ class VehicleService:
 
 	def reload_vehicles(self):
 		self._vehicle_repo.load()
-		print(self.get_all_vehicles())
+		# print(self.get_all_vehicles())
 
 	def save_vehicles(self):
 		self._vehicle_repo.save()
-		print("Vehicle saved")
+		# print("Vehicle saved")

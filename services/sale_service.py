@@ -34,8 +34,8 @@ class SaleService:
 
 	def reload_sales( self ):
 		self._sale_repo.load()
-		print(self.get_all_sales())
+		# print(self.get_all_sales())
 
 	def save_sales( self ):
 		self._sale_repo.save()
-		print("saved sale successfully!")
+		# print("saved sale successfully!")

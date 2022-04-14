@@ -54,7 +54,7 @@ class CustomerService:
 	def get_all_customers(self):
 		return self._customer_repo.find_all()
 
-	def get_customer_by_id( self, id ):
+	def get_customer_by_id( self, id ) -> Customer:
 		return self._customer_repo.find_by_id(id)
 
 	def get_customer_by_pin( self, pin ):
@@ -65,8 +65,8 @@ class CustomerService:
 
 	def reload_customers( self ):
 		self._customer_repo.load()
-		print(self.get_all_customers())
+		# print(self.get_all_customers())
 
 	def save_customers( self ):
 		self._customer_repo.save()
-		print("saved successfully!")
+		# print("saved successfully!")
